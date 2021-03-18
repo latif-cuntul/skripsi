@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Server version:               10.3.24-MariaDB-1:10.3.24+maria~bionic-log - mariadb.org binary distribution
--- Server OS:                    debian-linux-gnu
--- HeidiSQL Version:             11.0.0.5919
+-- Versi server:                 10.4.11-MariaDB - mariadb.org binary distribution
+-- OS Server:                    Win64
+-- HeidiSQL Versi:               11.0.0.5919
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -11,7 +11,12 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table latip.riwayat_mining
+
+-- Membuang struktur basisdata untuk web
+CREATE DATABASE IF NOT EXISTS `web` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `web`;
+
+-- membuang struktur untuk table web.riwayat_mining
 CREATE TABLE IF NOT EXISTS `riwayat_mining` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `riwayat_kd` varchar(50) DEFAULT NULL,
@@ -22,43 +27,58 @@ CREATE TABLE IF NOT EXISTS `riwayat_mining` (
   `tgl_mulai` date DEFAULT NULL,
   `tgl_selesai` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=1042 DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table latip.riwayat_mining: ~29 rows (approximately)
+-- Membuang data untuk tabel web.riwayat_mining: ~44 rows (lebih kurang)
 /*!40000 ALTER TABLE `riwayat_mining` DISABLE KEYS */;
 INSERT INTO `riwayat_mining` (`id`, `riwayat_kd`, `produk_nama`, `jumlah_produk`, `support`, `confiden`, `tgl_mulai`, `tgl_selesai`) VALUES
-	(1, '1613667344', 'moccacino', 73, '1', '20', '2019-09-01', '2019-09-30'),
-	(2, '1613667344', 'pisang coklat', 121, '1', '20', '2019-09-01', '2019-09-30'),
-	(3, '1613667344', 'mie goreng', 91, '1', '20', '2019-09-01', '2019-09-30'),
-	(4, '1613667344', 'french fries', 168, '1', '20', '2019-09-01', '2019-09-30'),
-	(5, '1613667344', 'cappucino', 70, '1', '20', '2019-09-01', '2019-09-30'),
-	(6, '1613667344', 'long black', 73, '1', '20', '2019-09-01', '2019-09-30'),
-	(7, '1613667344', 'v60', 69, '1', '20', '2019-09-01', '2019-09-30'),
-	(8, '1613667344', 'mendoan', 167, '1', '20', '2019-09-01', '2019-09-30'),
-	(9, '1613667344', 'roti bakar coklat', 67, '1', '20', '2019-09-01', '2019-09-30'),
-	(10, '1613667344', 'jamur crispy', 103, '1', '20', '2019-09-01', '2019-09-30'),
-	(11, '1613667344', 'americano', 53, '1', '20', '2019-09-01', '2019-09-30'),
-	(12, '1613667344', 'affogato', 84, '1', '20', '2019-09-01', '2019-09-30'),
-	(13, '1613667344', 'vietnam drip', 75, '1', '20', '2019-09-01', '2019-09-30'),
-	(14, '1613667344', 'orange squash', 56, '1', '20', '2019-09-01', '2019-09-30'),
-	(15, '1613667344', 'nasi goreng spesial', 74, '1', '20', '2019-09-01', '2019-09-30'),
-	(16, '1613667344', 'blue ocean', 58, '1', '20', '2019-09-01', '2019-09-30'),
-	(17, '1613667344', 'roti bakar nanas', 60, '1', '20', '2019-09-01', '2019-09-30'),
-	(18, '1613667344', 'green tea', 68, '1', '20', '2019-09-01', '2019-09-30'),
-	(19, '1613667344', 'expresso', 86, '1', '20', '2019-09-01', '2019-09-30'),
-	(20, '1613667344', 'coklat', 70, '1', '20', '2019-09-01', '2019-09-30'),
-	(21, '1613667344', 'coffee beer', 72, '1', '20', '2019-09-01', '2019-09-30'),
-	(22, '1613667344', 'mie rebus', 57, '1', '20', '2019-09-01', '2019-09-30'),
-	(23, '1613667344', 'aeropress', 69, '1', '20', '2019-09-01', '2019-09-30'),
-	(24, '1613667344', 'nasi goreng seafood', 78, '1', '20', '2019-09-01', '2019-09-30'),
-	(25, '1613667344', 'coffee latte', 63, '1', '20', '2019-09-01', '2019-09-30'),
-	(26, '1613667344', 'lemon squash', 69, '1', '20', '2019-09-01', '2019-09-30'),
-	(27, '1613667344', 'tubruk', 86, '1', '20', '2019-09-01', '2019-09-30'),
-	(28, '1613667344', 'milk tea', 66, '1', '20', '2019-09-01', '2019-09-30'),
-	(29, '1613667344', 'roti bakar keju', 66, '1', '20', '2019-09-01', '2019-09-30');
+	(837, '1614614942', 'moccacino', 73, '2', '50', '2019-09-01', '2019-09-30'),
+	(838, '1614614942', 'french fries', 168, '2', '50', '2019-09-01', '2019-09-30'),
+	(839, '1614614942', 'v60', 69, '2', '50', '2019-09-01', '2019-09-30'),
+	(840, '1614614942', 'mendoan', 167, '2', '50', '2019-09-01', '2019-09-30'),
+	(841, '1614614942', 'vietnam drip', 75, '2', '50', '2019-09-01', '2019-09-30'),
+	(842, '1614614942', 'tubruk', 86, '2', '50', '2019-09-01', '2019-09-30'),
+	(843, '1614615947', 'french fries', 168, '3', '50', '2019-09-01', '2019-09-30'),
+	(844, '1614615947', 'v60', 69, '3', '50', '2019-09-01', '2019-09-30'),
+	(845, '1614615947', 'mendoan', 167, '3', '50', '2019-09-01', '2019-09-30'),
+	(846, '1614616190', 'moccacino', 73, '1', '50', '2019-09-01', '2019-09-30'),
+	(847, '1614616190', 'pisang coklat', 121, '1', '50', '2019-09-01', '2019-09-30'),
+	(848, '1614616190', 'mie goreng', 91, '1', '50', '2019-09-01', '2019-09-30'),
+	(849, '1614616190', 'french fries', 168, '1', '50', '2019-09-01', '2019-09-30'),
+	(850, '1614616190', 'cappucino', 70, '1', '50', '2019-09-01', '2019-09-30'),
+	(851, '1614616190', 'long black', 73, '1', '50', '2019-09-01', '2019-09-30'),
+	(852, '1614616190', 'v60', 69, '1', '50', '2019-09-01', '2019-09-30'),
+	(853, '1614616190', 'mendoan', 167, '1', '50', '2019-09-01', '2019-09-30'),
+	(854, '1614616190', 'roti bakar coklat', 67, '1', '50', '2019-09-01', '2019-09-30'),
+	(855, '1614616190', 'jamur crispy', 103, '1', '50', '2019-09-01', '2019-09-30'),
+	(856, '1614616190', 'americano', 53, '1', '50', '2019-09-01', '2019-09-30'),
+	(857, '1614616190', 'affogato', 84, '1', '50', '2019-09-01', '2019-09-30'),
+	(858, '1614616190', 'vietnam drip', 75, '1', '50', '2019-09-01', '2019-09-30'),
+	(859, '1614616190', 'orange squash', 56, '1', '50', '2019-09-01', '2019-09-30'),
+	(860, '1614616190', 'nasi goreng spesial', 74, '1', '50', '2019-09-01', '2019-09-30'),
+	(861, '1614616190', 'blue ocean', 58, '1', '50', '2019-09-01', '2019-09-30'),
+	(862, '1614616190', 'roti bakar nanas', 60, '1', '50', '2019-09-01', '2019-09-30'),
+	(863, '1614616190', 'green tea', 68, '1', '50', '2019-09-01', '2019-09-30'),
+	(864, '1614616190', 'expresso', 86, '1', '50', '2019-09-01', '2019-09-30'),
+	(865, '1614616190', 'coklat', 70, '1', '50', '2019-09-01', '2019-09-30'),
+	(866, '1614616190', 'coffee beer', 72, '1', '50', '2019-09-01', '2019-09-30'),
+	(867, '1614616190', 'mie rebus', 57, '1', '50', '2019-09-01', '2019-09-30'),
+	(868, '1614616190', 'aeropress', 69, '1', '50', '2019-09-01', '2019-09-30'),
+	(869, '1614616190', 'nasi goreng seafood', 78, '1', '50', '2019-09-01', '2019-09-30'),
+	(870, '1614616190', 'coffee latte', 63, '1', '50', '2019-09-01', '2019-09-30'),
+	(871, '1614616190', 'lemon squash', 69, '1', '50', '2019-09-01', '2019-09-30'),
+	(872, '1614616190', 'tubruk', 86, '1', '50', '2019-09-01', '2019-09-30'),
+	(873, '1614616190', 'milk tea', 66, '1', '50', '2019-09-01', '2019-09-30'),
+	(874, '1614616190', 'roti bakar keju', 66, '1', '50', '2019-09-01', '2019-09-30'),
+	(875, '1614616304', 'moccacino', 73, '2', '50', '2019-09-01', '2019-09-30'),
+	(876, '1614616304', 'french fries', 168, '2', '50', '2019-09-01', '2019-09-30'),
+	(877, '1614616304', 'v60', 69, '2', '50', '2019-09-01', '2019-09-30'),
+	(878, '1614616304', 'mendoan', 167, '2', '50', '2019-09-01', '2019-09-30'),
+	(879, '1614616304', 'vietnam drip', 75, '2', '50', '2019-09-01', '2019-09-30'),
+	(880, '1614616304', 'tubruk', 86, '2', '50', '2019-09-01', '2019-09-30');
 /*!40000 ALTER TABLE `riwayat_mining` ENABLE KEYS */;
 
--- Dumping structure for table latip.tbl_transaksi
+-- membuang struktur untuk table web.tbl_transaksi
 CREATE TABLE IF NOT EXISTS `tbl_transaksi` (
   `transaksi_id` int(11) NOT NULL,
   `produk` text DEFAULT NULL,
@@ -66,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `tbl_transaksi` (
   PRIMARY KEY (`transaksi_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- Dumping data for table latip.tbl_transaksi: ~525 rows (approximately)
+-- Membuang data untuk tabel web.tbl_transaksi: ~525 rows (lebih kurang)
 /*!40000 ALTER TABLE `tbl_transaksi` DISABLE KEYS */;
 INSERT INTO `tbl_transaksi` (`transaksi_id`, `produk`, `tanggal`) VALUES
 	(1901001, 'moccacino,pisang coklat,mie goreng,french fries', '2019-09-01'),
@@ -596,19 +616,20 @@ INSERT INTO `tbl_transaksi` (`transaksi_id`, `produk`, `tanggal`) VALUES
 	(1930022, 'long black,green tea,v60,french fries,roti bakar strawberry', '2019-09-30');
 /*!40000 ALTER TABLE `tbl_transaksi` ENABLE KEYS */;
 
--- Dumping structure for table latip.user
+-- membuang struktur untuk table web.user
 CREATE TABLE IF NOT EXISTS `user` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(50) DEFAULT NULL,
   `username` varchar(50) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
--- Dumping data for table latip.user: ~0 rows (approximately)
+-- Membuang data untuk tabel web.user: ~2 rows (lebih kurang)
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
 INSERT INTO `user` (`user_id`, `nama`, `username`, `password`) VALUES
-	(1, 'arip', 'arip', 'arip123');
+	(1, 'latif', 'latif', 'latif123'),
+	(2, 'admin', 'admin', 'admin');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

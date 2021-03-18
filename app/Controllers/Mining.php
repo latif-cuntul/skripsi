@@ -101,6 +101,8 @@ class Mining extends BaseController
             }
         }
 
+// print_r("<pre>");print_r($this->dataTransaksi);die();
+
         $itemset1 = [];
         foreach ($hsl_item1 as $key => $val) {
             $item_support = round(($val / $this->jumlahTransaksi) * 100, 2);
@@ -123,7 +125,7 @@ class Mining extends BaseController
         }
 
         if (empty($item1_lolos)) {
-            echo "<script>alert('ITEMSET 1 TIDAK ADA YANG LOLOS NILAI SUPPORT')</script>";
+            // echo "<script>alert('ITEMSET 1 TIDAK ADA YANG LOLOS NILAI SUPPORT')</script>";
             die; // nek ra lolos langsung mandek programe, ra muncul ke hasile
         }
         $this->tampilItemset1 = $item1;
@@ -157,7 +159,7 @@ class Mining extends BaseController
         // echo "============== kombinasi itemset 2 ============== <br/>";
         // echo "<pre>";
         // print_r($kombinasi_item2);
-        // echo "</pre>";
+        // echo "</pre>"; die();
         // echo "==============  ============== <br/>";
 
         $hsl_item2 = [];
@@ -211,10 +213,10 @@ class Mining extends BaseController
         $this->tampilItemset2 = $item2;
         $this->tampilItemset2lolos = $item2_lolos;
         if (empty($item2_lolos)) {
-            echo "<script> alert('item2_lolos kosong')</script>";
+            //echo "<script> alert('item2_lolos kosong')</script>";
             $this->asosiasi($item2, []);
         } else {
-            echo "<script> alert('item2_lolos ada')</script>";
+           // echo "<script> alert('item2_lolos ada')</script>";
             $kombinasi_item3 = [];
             for ($i = 0; $i < sizeof($item2_lolos); $i++) {
                 foreach ($item2_lolos as $key) {
@@ -265,7 +267,7 @@ class Mining extends BaseController
         $dataSaran = [];
 
         if (!empty($dataItemset2)) {
-            echo "<script> alert('KOMBINASI ITEMSET 3 TIDAK DAPAT DIBENTUK, KARENA ITEMSET 2 TIDAK LOLOS SUPPORT SEMUA')</script>";
+            // echo "<script> alert('KOMBINASI ITEMSET 3 TIDAK DAPAT DIBENTUK, KARENA ITEMSET 2 TIDAK LOLOS SUPPORT SEMUA')</script>";
             $satuitem = [];
             $jumlahX = [];
             $jumlahXY = [];
@@ -306,7 +308,7 @@ class Mining extends BaseController
             $this->tampilItemset3 = $item3;
 
             if (empty($item3_lolos)) {
-                echo "<script> alert('ITEMSET 3 TIDAK ADA YANG LOLOS NILAI SUPPORT')</script>";
+                // echo "<script> alert('ITEMSET 3 TIDAK ADA YANG LOLOS NILAI SUPPORT')</script>";
 
                 $satuitem = [];
                 $jumlahX = [];
@@ -335,7 +337,7 @@ class Mining extends BaseController
                 $data['debugData'] = $debugData;
                 // $data['hasilAsosiasi2'] = $hsl_assosiasi ;
             } else {
-                echo "<script> alert('ITEMSET 3 LOLOS NILAI SUPPORT')</script>";
+                // echo "<script> alert('ITEMSET 3 LOLOS NILAI SUPPORT')</script>";
                 $this->tampilItemset3Lolos = $item3_lolos;
 
                 $duaitem = [];
@@ -451,9 +453,9 @@ class Mining extends BaseController
         $model = new Riwayat_Model();
         $eks = $model->simpan($data);
         if ($eks) {
-            echo "<script>alert('SUKSES SIMPAN RIWAYAT')</script>";
+            //echo "<script>alert('SUKSES SIMPAN RIWAYAT')</script>";
         } else {
-            echo "<script>alert('GAGAL SIMPAN RIWAYAT')</script>";
+            // echo "<script>alert('GAGAL SIMPAN RIWAYAT')</script>";
         }
     }
 
